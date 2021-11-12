@@ -1,10 +1,88 @@
 <!doctype html>
 
 <html>
-	<head>
-	</head>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/style.css" />
 
-	<body>
-		<h2>Job time!</h2>
-	</body>
+        <title>subsalt: liberate your data</title>
+    </head>
+
+    <body>
+
+    <header class="bg-gray-800">
+        <nav class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+            <div class="flex items-center justify-between">
+                <a class="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400"
+                    href="#">subsalt</a>
+            </div>
+        </nav>
+    
+        <section class="flex items-center justify-center" style="height: 500px;">
+            <div class="text-center">
+                <h2 class="max-w-4xl mt-6 text-3xl text-white md:text-5xl">
+					<span class="font-extralight">We're looking for a </span>
+					<span class="font-semibold">data scientist</span>
+					<span class="font-extralight"> to help make sensitive data more accessible.</span>
+				</h2>
+    
+                <div class="flex justify-center mt-8">
+                    <a href="mailto:jobs@getsubsalt.com" class="px-8 py-3 text-lg font-medium text-white transition-colors duration-300 transform bg-indigo-600 rounded hover:bg-indigo-500"
+                        href="#">Say hello</a>
+                </div>
+            </div>
+        </section>
+    </header>
+    
+    <!-- Detailed info -->
+    <section class="bg-white">
+        <div class="max-w-5xl px-6 pt-16 pb-8 mx-auto text-left">
+            <h2 class="text-3xl font-semibold text-gray-800">If you want to get your hands dirty with an early stage, ambitious company, we want to hear from you.</h2>
+            <p class="mt-4 text-gray-600">We're venture-funded, enterprise-focused, and still very early. We're looking for someone who can contribute directly to our product, spend time with our customers, and be a positive contributor to our company culture. If you're comfortable with ambiguity, excited by iteration, and interested in having significant influence in the company's foundation, you're gonna fit right in.</p>
+            
+			<h3 class="text-xl mt-6 font-semibold text-gray-800">The job</h3>
+
+			<p class="text-gray-600 mt-1">Our product depends on sound statistical methods to do its job. Data science is not a 'nice to have' for us; its fundamental to our ability to solve problems for our customers. Your core responsibilities will include:</p>
+
+			<ul class="list-disc pl-8 mt-2 text-gray-600 leading-6">
+				<li>
+					<span>Improving data quality of core product, including:</span>
+					<ul class="list-disc pl-4">
+						<li>implementing, evaluating, and deploying generative models in production environments</li>
+						<li>improving the usability and explainability of synthetic datasets for data consumers</li>
+						<li>implementing, evaluating, and deploying methods for limiting exposure risk in synthetic datasets</li>
+					</ul>
+				</li>
+				<li>Interfacing with customer technical / analysts teams and shaping product to solve their problems in scalable ways</li>
+				<li>Heavily shaping the direction of the product as a very early team member, and collaborate with technical and non-technical team members and founders</li>
+			</ul>
+
+			<h3 class="text-xl mt-6 font-semibold text-gray-800">Qualifications</h3>
+
+			<p class="text-gray-600 mt-1">Our product depends on sound statistical methods to do its job. Data science is not a 'nice to have' for us; its fundamental to our ability to solve problems for our customers.</p>
+
+			<ul class="list-disc pl-8 mt-2 text-gray-600 leading-6">
+				<li>Demonstrable experience delivering results on open-ended data science problems with high degree of autonomy</li>
+				<li>Comfortable with written and verbal communication with technical and non-technical audiences</li>
+				<li>Thrive in high velocity, collaborative early startup-like environments</li>
+				<li>Python and SQL experience</li>
+				<li>Preferred: Experience with generative methods or data synthesis</li>
+			</ul>
+        </div>
+    </section>
+
+    <!-- More info -->
+    <section class="bg-white">
+        <div class="max-w-5xl px-6 py-16 mx-auto">
+            <div class="px-8 py-12 bg-gray-800 rounded-md md:px-20 md:flex md:items-center md:justify-between">
+                <div>
+                    <h3 class="text-2xl font-semibold text-white">Interested in learning more?</h3>
+                    <p class="max-w-md mt-4 text-gray-400">Reach out to discuss how we can help you liberate your data.</p>
+                </div>
+    
+                <a href="mailto:jobs@getsubsalt.com" class="block px-8 py-2 mt-6 text-lg font-medium text-center text-white transition-colors duration-300 transform bg-indigo-600 rounded md:mt-0 hover:bg-indigo-500" href="#">Let's talk</a>
+            </div>
+        </div>
+    </section>
+    </body>
 </html>
