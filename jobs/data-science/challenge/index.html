@@ -1,0 +1,94 @@
+<!doctype html>
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="/style.css" />
+
+        <title>subsalt: liberate your data</title>
+    </head>
+
+    <body>
+
+    <header class="bg-gray-800">
+        <nav class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+            <div class="flex items-center justify-between">
+                <a class="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400"
+                    href="#">subsalt</a>
+            </div>
+        </nav>
+    
+        <section class="flex items-center justify-center" style="height: 500px;">
+            <div class="text-center">
+                <h2 class="max-w-4xl mt-6 text-3xl text-white md:text-5xl">
+					<p class="font-extralight">Data scientist</p>
+					<p class="font-semibold">Take-home challenge</p>
+				</h2>
+            </div>
+        </section>
+    </header>
+    
+    <!-- Detailed info -->
+    <section class="bg-white mb-8">
+        <div class="max-w-5xl px-6 pt-16 pb-8 mx-auto text-left">
+            <h2 class="text-2xl font-semibold text-gray-800">Purpose</h2>
+
+            <p class="mt-2 text-gray-600">The purpose of this challenge is to evaluate your thought process when faced with new problems as well as your ability to implement technical solutions to those problems.</p>
+            
+            <h2 class="text-2xl font-semibold text-gray-800 mt-4">Deliverables</h2>
+
+            <p class="mt-2 text-gray-600">You have one week to submit your response to this challenge.</p>
+
+            <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
+                <li>Your response should be in a Jupyter notebook (or similar sharable format) written in Python or R. Use tools that you're already comfortable with when possible.</li>
+                <li>Make sure you document your thought process in comments or similar. How you arrive at your approach is important.</li>
+                <li>Once you submit your response, I'll reach out to find some time for us to walk through it.</li>
+            </ul>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mt-4">Challenge description</h2>
+
+            <p class="mt-2 text-gray-600"><b>Scenario:</b> our legal team has denied our request to share sensitive data with an outside firm, but approved sharing synthetic data. The outside firm is going to use the data to build a classifier that we can use to classify users into high and low churn risk groups. Our goal is to create a synthetic version of our dataset and evaluate its quality so that we can begin the engagement.</p>
+
+            <p class="mt-2 text-gray-600">
+                <span>We'll use </span>
+                <a class="font-semibold underline" href="challenge/CustomerDataExport.csv">this dataset</a>
+                <span> as our sensitive dataset that we need to synthesize. It's got a column called <code>HighChurnRisk</code> that serves as the label for each row.</span>
+            </p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 1: create a synthetic version</h3>
+
+            <p class="mt-2 text-gray-600">Requirements:</p>
+
+            <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
+                <li>The quality of the synthetic version (how statistically representative it is of the original, sensitive version) is <b>NOT</b> important, though it shouldn't be totally random noise.</li>
+                <li>The structure of the synthetic table should be the same as the structure of the sensitive table, i.e. same columns. <a class="font-semibold underline" href="challenge/CustomerDataExport-Synthetic.csv">Here's an example</a> well-formed synthetic version of this dataset.</li>
+                <li>Store the synthetic rows in an appropriate data structure, i.e. a dataframe or list in Python, in your notebook.</li>
+            </ul>
+
+            <p class="mt-2 text-gray-600">You can use any open source libraries, including synthetic data generation libraries, or implement from scratch. Make sure you're comfortable describing how your chosen method works, especially if you use an open source library.</p>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 2: evaluate the quality of your synthetic records</h3>
+
+            <p class="mt-2 text-gray-600">Implement a method for measuring the quality of your synthetic dataset, i.e. how representative it will be for the classification task that the outside firm is undertaking. Reminder: it does not matter if your synthetic dataset is low quality for this challenge.</p>
+
+            <p class="mt-2 text-gray-600">Requirements:</p>
+            <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
+                <li>Implement a method to measure the quality of your synthetic dataset. Be sure to document the rationale behind your approach.</li>
+                <li>It is ok if your quality metrics are specific to the task (classification) and would not apply more broadly.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 3: education</h3>
+
+            <p class="mt-2 text-gray-600">In one paragraph or less, describe what your method from Part 2 is measuring and why its a useful measurement to a non-technical audience.</p>
+
+            <p class="mt-2 text-gray-600">Requirements:</p>
+                <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
+                    <li>Drop your description into your notebook as a comment.</li>
+                </ul>
+            </p>
+
+        </div>
+    </section>
+
+    </body>
+</html>
