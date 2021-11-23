@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css" integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="/style.css" />
 
-        <title>subsalt: liberate your data</title>
+        <title>subsalt: data scientist take-home challenge</title>
     </head>
 
     <body>
@@ -40,52 +40,39 @@
             <p class="mt-2 text-gray-600">You have one week to submit your response to this challenge.</p>
 
             <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
-                <li>Your response should be in a Jupyter notebook (or similar sharable format) written in Python or R. Use tools that you're already comfortable with when possible.</li>
+                <li>Your response should be in a Jupyter notebook (or similar sharable format) written in Python or R. Written responses can be in the format of your choice; comments or Markdown in your notebook are fine.</li>
                 <li>Make sure you thoroughly document your thought process in comments or similar. How you arrive at your approach is important.</li>
+                <li>Feel free to use any open source libraries or tools in your analysis.</li>
             </ul>
 
             <h2 class="text-2xl font-semibold text-gray-800 mt-4">Challenge description</h2>
 
-            <p class="mt-2 text-gray-600"><b>Scenario:</b> our legal team has denied our request to share sensitive data with an outside firm, but approved sharing synthetic data. The outside firm is going to use the data to build a classifier that we can use to classify users into high and low churn risk groups. Our goal is to create a synthetic version of our dataset and evaluate its quality so that we can begin the engagement.</p>
+            <p class="mt-2 text-gray-600">This challenge will consider a database of crime reports. The starting dataset is available <a class="font-semibold underline" href="crimes.csv">here</a>.</p>
 
-            <p class="mt-2 text-gray-600">
-                <span>We'll use </span>
-                <a class="font-semibold underline" href="CustomerDataExport.csv">this dataset</a>
-                <span> as our sensitive dataset that we need to synthesize. It's got a column called <code>HighChurnRisk</code> that serves as the label for each row.</span>
-            </p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 1: imputation</h3>
 
-            <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 1: create a synthetic version</h3>
+            <p class="mt-2 text-gray-600">The dataset provided above is missing some values, which are represented as <code class="bg-gray-200 p-1 rounded">?</code> -- fill these holes with reasonable values using an imputation method of your choice.</p>
 
             <p class="mt-2 text-gray-600">Requirements:</p>
-
             <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
-                <li>The quality of the synthetic version (how statistically representative it is of the original, sensitive version) is <b>NOT</b> important, though it shouldn't be totally random noise.</li>
-                <li>The structure of the synthetic table should be the same as the structure of the sensitive table, i.e. same columns. <a class="font-semibold underline" href="CustomerDataExport-Synthetic.csv">Here's an example</a> well-formed synthetic version of this dataset.</li>
-                <li>Store the synthetic rows in an appropriate data structure, i.e. a dataframe or list in Python, in your notebook.</li>
+                <li>Document your rationale for selecting your chosen method(s), as well as any other methods you tried (if any).</li>
+                <li>Retain the imputed form of the dataset for use in Part 2.</li>
             </ul>
 
-            <p class="mt-2 text-gray-600">You can use any open source libraries, including synthetic data generation libraries, or implement from scratch. Make sure you're comfortable describing how your chosen method works, especially if you use an open source library.</p>
+            <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 2: classification</h3>
 
-            <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 2: evaluate the quality of your synthetic records</h3>
-
-            <p class="mt-2 text-gray-600">Implement a method for measuring the quality of your synthetic dataset, i.e. how representative it will be for the classification task that the outside firm is undertaking. Reminder: it does not matter if your synthetic dataset is low quality for this challenge.</p>
+            <p class="mt-2 text-gray-600">Build a binary classifier to predict whether a given crime report will lead to an arrest, and evaluate your classifier's expected performance via cross-validation.</p>
 
             <p class="mt-2 text-gray-600">Requirements:</p>
             <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
-                <li>Implement a method to measure the quality of your synthetic dataset. Be sure to document the rationale behind your approach.</li>
-                <li>It is ok if your quality metrics are specific to the task (classification) and would not apply more broadly.</li>
+                <li>Use your imputed dataset from Part 1, not the original dataset.</li>
+                <li>Quantify your model's performance using appropriate metrics, and summarize your findings.</li>
+                <li>Document your rationale for selecting your chosen classification method, as well as any other methods you tried (if any).</li>
             </ul>
 
             <h3 class="text-xl font-semibold text-gray-800 mt-4">Part 3: education</h3>
 
-            <p class="mt-2 text-gray-600">In one paragraph or less, describe what your method from Part 2 is measuring and why its a useful measurement. Assume your audience is non-technical.</p>
-
-            <p class="mt-2 text-gray-600">Requirements:</p>
-                <ul class="list-disc pl-8 my-2 leading-6 text-gray-600">
-                    <li>Drop your description into your notebook as a comment.</li>
-                </ul>
-            </p>
-
+            <p class="mt-2 text-gray-600">In one paragraph or less, describe how your classification method works to a non-technical audience.</p>
         </div>
     </section>
 
